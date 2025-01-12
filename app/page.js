@@ -1,101 +1,106 @@
-import Image from "next/image";
+import Image from 'next/image';
+import Link from 'next/link';
+import { FaFacebook, FaLinkedin, FaGithub, FaWhatsapp } from 'react-icons/fa';
+import AboutMeSection from './about/page';
+import PortfolioServicesSection from './services/page';
+import ContactPage from './contact/page';
+import PortfolioSection from './portfolio/page';
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div>
+      {/* Hero Section */}
+      <section className="bg-green-50 py-20 ">
+        <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center px-16 lg:px-16">
+          {/* Left Content */}
+          <div className="lg:w-1/2 text-center lg:text-left space-y-6 md:px-1  mt-10 md:mt-[60px] sm:mt-[60px]">
+            <p className="text-xl">Hi, I am</p>
+            <strong className="text-2xl lg:text-3xl font-semibold text-gray-900">
+              Mujahidul Islam
+            </strong>
+            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 mt-6">
+              Web Developer
+            </h1>
+            <p className="text-md text-gray-700 max-w-xl mx-auto lg:mx-0 md:max-w-43">
+              I specialize in building responsive, user-friendly, and visually
+              stunning websites and applications using the latest web
+              technologies.
+            </p>
+            <div className="flex justify-center lg:justify-start space-x-6 mt-6 mb-6">
+              {/* Social Media Icons */}
+              <a
+                href="https://www.facebook.com/profile.php?id=100037444207298"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-800 text-3xl"
+              >
+                <FaFacebook />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/mojahidul-islam-399793338/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 hover:text-blue-700 text-3xl"
+              >
+                <FaLinkedin />
+              </a>
+              <a
+                href="https://github.com/mujahidul-islam-21"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-700 hover:text-black text-3xl"
+              >
+                <FaGithub />
+              </a>
+              <a
+                href="https://wa.me/8801944459681"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-green-500 hover:text-green-700 text-3xl"
+              >
+                <FaWhatsapp />
+              </a>
+            </div>
+            <div className="flex justify-center lg:justify-start space-x-6 mt-6 mb-6">
+              <Link
+                href="/contact"
+                className="bg-green-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-green-700 transition duration-300"
+              >
+                Hire Me
+              </Link>
+              <a
+                href="/Mujahidul_Islam_Resume.pdf"
+                download="Your-CV.pdf"
+                className="bg-orange-500 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-orange-600 transition duration-300"
+              >
+                Download CV
+              </a>
+            </div>
+          </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          {/* Right Image */}
+          <div className="lg:w-1/2 flex justify-center lg:justify-end relative">
+            {/* Base Image */}
+            <div
+              className={`${'sm:hidden md:block'} flex flex-col md:items-center lg:flex-row  lg:items-start`}
+            >
+              {/* Overlay Image */}
+              <Image
+                src="/WhatsApp_Image__arabian2024-07-17_at_12.30.53_4b09723f-removebg-preview.png"
+                alt="Overlay Image"
+                width={500}
+                height={500}
+                className="rounded-lg shadow-xl transition-all duration-500"
+              />
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      <AboutMeSection />
+      <PortfolioServicesSection />
+      <PortfolioSection />
+      <ContactPage />
     </div>
   );
 }
