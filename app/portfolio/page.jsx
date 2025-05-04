@@ -7,14 +7,15 @@ const PortfolioSection = () => {
     {
       id: 1,
       title: 'Project 1',
-      imageUrl: '/2022-06-01_08-08-07.png',
-      link: '/portfolio/project-1',
+      imageUrl: '/bangk.jpeg',
+      link: 'https://bank-management--six.vercel.app/',
     },
     {
       id: 2,
       title: 'Project 2',
-      imageUrl: '/2022-06-01_08-09-38.png',
-      link: '/portfolio/project-2',
+      imageUrl:
+        '/screencapture-mit-tube-yy2d-vercel-app-2025-05-04-18_49_39.png',
+      link: 'https://mit-tube-yy2d.vercel.app/',
     },
     {
       id: 3,
